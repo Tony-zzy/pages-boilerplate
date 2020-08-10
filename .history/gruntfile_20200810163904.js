@@ -62,7 +62,7 @@ module.exports = grunt => {
                     cwd: 'src/assets/images',//原图存放的文件夹
                     src: ['**/*.{png,jpg,jpeg,gif}'], // 优化 img 目录下所有 png/jpg/jpeg/gif图片
                     dest: 'dist/assets/images' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
-                }, {
+                },{
                     expand: true,
                     cwd: 'src/assets/fonts',//原图存放的文件夹
                     src: ['**/*.{png,jpg,jpeg,gif,svg}'], // 优化 img 目录下所有 png/jpg/jpeg/gif图片
@@ -73,10 +73,10 @@ module.exports = grunt => {
         copy: {
             main: {
                 files: [
-                    { expand: true, src: ['src/assets/fonts'], dest: 'dist/assets/fonts' },
-                    { expand: true, src: ['public'], dest: 'dist/public]' },
-                    // src: 'src/assets/fonts',
-                    // dest: 'dist/assets/fonts'
+                    {expand: true, src: [ 'src/assets/fonts'], dest: 'dist/assets/fonts'},
+                    {expand: true, src: ['public'], dest: 'dist/public]'},
+                // src: 'src/assets/fonts',
+                // dest: 'dist/assets/fonts'
                 ]
             }
         }
@@ -85,11 +85,10 @@ module.exports = grunt => {
     })
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-sass')
-    grunt.loadNpmTasks('grunt-contrib-copy')
     // grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-imagemin')
     grunt.loadNpmTasks('grunt-babel')
-    grunt.registerTask('default', ['clean', 'sass', 'babel', 'uglify', 'copy', 'imagemin'])
+    grunt.registerTask('default', ['clean', 'sass', 'babel', 'uglify','copy','imagemin'])
 }
