@@ -180,6 +180,7 @@ const compile = parallel(style, script, page);
 //上线编译
 const build = series(
     clean,
+
     parallel(series(compile, useref), image, font, extra)
 
 );
