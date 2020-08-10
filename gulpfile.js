@@ -52,10 +52,10 @@ let knownOptions = {
 };
 let options = minimist(process.argv.slice(2), knownOptions);
 
-try {
-    if (options.production || options.prod)
-        options.baseUrl = config.build.dist
-} catch (e) { console.log(e) }
+// try {
+//     if (options.production || options.prod)
+//         options.baseUrl = config.build.dist
+// } catch (e) { console.log(e) }
 
 const plugins = loadPlugins(); //自动加载插件
 const bs = browserSync.create();
